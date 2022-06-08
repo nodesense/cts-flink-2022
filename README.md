@@ -45,6 +45,7 @@ code ~/.bashrc
 
 paste below end of the file
 
+
 ```
 export FLINK_HOME=/opt/flink-1.15.0
 export CLASSPATH=$CLASSPATH:$FLINK_HOME/lib/*:.
