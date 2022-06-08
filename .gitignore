@@ -3,3 +3,4 @@
 *.egg
 .ipynb_checkpoints
 data/ecommerce-clean.csv
+data/
