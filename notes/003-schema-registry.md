@@ -29,3 +29,10 @@
   ```
   
 
+  copy and paste them into producer
+  
+```
+{"name":"iphone", "price" : 1000}
+{"name":"galaxy", "price" : 600}
+  
+```
