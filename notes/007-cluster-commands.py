@@ -154,3 +154,7 @@ $FLINK_HOME/bin/flink savepoint 63fa92f627685a4c0831d9137e2e0e9e hdfs://localhos
         
 ```
 
+```
+Savepoint completed. Path: hdfs://localhost:9000/savepoints/63fa92f627685a4c0831d9137e2e0e9e/june-13-2022-7-09-pm/savepoint-63fa92-c183070ae2f8
+You can resume your program from this savepoint with the run command.
+```
