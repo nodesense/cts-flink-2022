@@ -158,3 +158,22 @@ $FLINK_HOME/bin/flink savepoint 63fa92f627685a4c0831d9137e2e0e9e hdfs://localhos
 Savepoint completed. Path: hdfs://localhost:9000/savepoints/63fa92f627685a4c0831d9137e2e0e9e/june-13-2022-7-09-pm/savepoint-63fa92-c183070ae2f8
 You can resume your program from this savepoint with the run command.
 ```
+
+
+## Stop the job with save point 
+
+Typical use case is upgrade your code, bug fix, redeploy the code, 
+
+```
+$FLINK_HOME/bin/flink stop   --savepointPath hdfs://localhost:9000/savepoint-planned/kafka-june13-2022-7-15pm 63fa92f627685a4c0831d9137e2e0e9e
+```
+
+## FIXME: stop error due to kafka error
+
+## Stop the job without save point
+
+Typical use case is upgrade your code, bug fix, redeploy the code, 
+## FIXME 
+```
+$FLINK_HOME/bin/flink stop   63fa92f627685a4c0831d9137e2e0e9e
+```
