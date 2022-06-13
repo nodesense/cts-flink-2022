@@ -90,3 +90,39 @@ open http://localhost:8282
 http://localhost:50070
     
     under browse directories
+    
+    
+## Save Point
+
+
+```
+$FLINK_HOME/bin/flink  run -m localhost:8282 -py /home/rps/workshop/notebooks/Kafka-SavePoint.py
+
+```
+
+result 
+
+```
+Job has been submitted with JobID 63fa92f627685a4c0831d9137e2e0e9e
+
+```
+
+Look for job id printedo n console, and copy the job id for further commands
+
+Failure may happen unplanned or unexpected way..
+
+Good to save save points periodically using job id [scheduler]
+
+### Trigger a save point using commmand
+
+```
+$FLINK_HOME/bin/flink savepoint 63fa92f627685a4c0831d9137e2e0e9e hdfs://localhost:9000/savepoints/63fa92f627685a4c0831d9137e2e0e9e/june-13-2022-6-32-pm
+        
+```
+
+```
+Savepoint completed. Path: hdfs://localhost:9000/savepoints/63fa92f627685a4c0831d9137e2e0e9e/june-13-2022-6-32-pm/savepoint-63fa92-072f4f387c4b
+```
+            
+
+open http://localhost:8282
