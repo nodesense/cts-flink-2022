@@ -1,4 +1,29 @@
+
+
 open terminal 
+
+
+###  Hadooo cluster
+
+start cluster
+
+```
+$HADOOP_HOME/sbin/start-all.sh
+```
+
+```
+jps
+```
+
+check namenode, datanode running
+
+stop cluster
+
+```
+$HADOOP_HOME/sbin/stop-all.sh
+```
+
+### Flink cluster
 
 port config 
 
