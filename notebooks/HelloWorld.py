@@ -1,4 +1,6 @@
 from pyflink.table import EnvironmentSettings, TableEnvironment
+from pyflink.table.expressions import col
+
 # Shift + Enter to run the cell
 
 # create environment for batch mode 
