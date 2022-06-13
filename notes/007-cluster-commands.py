@@ -17,6 +17,12 @@ $FLINK_HOME/bin/start-cluster.sh
 ```
 
 
+
+```
+
+$FLINK_HOME/bin/stop-cluster.sh
+```
+
 open browser, http://localhost:8282
 
 
