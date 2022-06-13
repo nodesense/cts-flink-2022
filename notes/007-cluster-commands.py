@@ -23,6 +23,19 @@ stop cluster
 $HADOOP_HOME/sbin/stop-all.sh
 ```
 
+## Kafka , ZooKeeper, Schema Registry
+
+start only, Kafka , ZooKeeper, Schema Registry
+
+```
+confluent local start zookeeper
+confluent local start kafka
+confluent local start schema-registry
+    
+confluent local status
+
+```
+
 ### Flink cluster
 
 port config 
