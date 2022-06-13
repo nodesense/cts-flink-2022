@@ -92,6 +92,23 @@ http://localhost:50070
     under browse directories
     
     
+ ## KAkfa producer
+
+```
+
+{"tag": "sensor1", "value": 32.3}
+{"tag": "sensor2", "value": 2}
+{"tag": "sensor3", "value": 3}
+{"tag": "sensor4", "value": 4}
+{"tag": "sensor5", "value": 5}
+
+do save point
+
+{"tag": "sensor6", "value": 6}
+{"tag": "sensor7", "value": 7}
+{"tag": "sensor8", "value": 8}
+```
+    
 ## Save Point
 
 
@@ -126,3 +143,14 @@ Savepoint completed. Path: hdfs://localhost:9000/savepoints/63fa92f627685a4c0831
             
 
 open http://localhost:8282
+        
+        
+        
+
+### Trigger a save point using commmand
+
+```
+$FLINK_HOME/bin/flink savepoint 63fa92f627685a4c0831d9137e2e0e9e hdfs://localhost:9000/savepoints/63fa92f627685a4c0831d9137e2e0e9e/june-13-2022-7-09-pm
+        
+```
+
