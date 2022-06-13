@@ -177,3 +177,24 @@ Typical use case is upgrade your code, bug fix, redeploy the code,
 ```
 $FLINK_HOME/bin/flink stop   63fa92f627685a4c0831d9137e2e0e9e
 ```
+
+
+# Resuming from save point  after a crash or stop with save point
+
+```
+$FLINK_HOME/bin/flink run -s hdfs://localhost:9000/savepoints/63fa92f627685a4c0831d9137e2e0e9e/june-13-2022-7-09-pm/savepoint-63fa92-c183070ae2f8 -py  /home/rps/workshop/notebooks/Kafka-SavePoint.py
+```
+
+
+## savepoint won't be deleted by default
+
+
+
+delete using command /manual in HDFS
+
+## FIXME
+
+```
+$FLINK_HOME/bin/flink savepoint -d hdfs://localhost:9000/savepoints/63fa92f627685a4c0831d9137e2e0e9e/june-13-2022-7-09-pm/savepoint-63fa92-c183070ae2f8
+        
+```
