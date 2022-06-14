@@ -45,9 +45,21 @@ cd zookeeper
 
 docker-compose up -d
 
+
+# Copy lib directorys
+
+open terminal 
+
+
 # start flink
 
 cd flink 
+
+
+
+```
+cp -r $FLINK_HOME/lib .
+```
 
 docker build -t flink:test -f Dockerfile .
 
