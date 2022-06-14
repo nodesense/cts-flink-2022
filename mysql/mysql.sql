@@ -10,6 +10,12 @@ CREATE CATALOG my_catalog WITH(
 
 USE CATALOG my_catalog;
 
+SHOW CATALOGS;
+
+SHOW DATABASES;
+
+SHOW TABLES;
+
 SELECT * FROM person;
 
 INSERT INTO person2 SELECT * FROM person;
