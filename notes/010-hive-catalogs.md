@@ -39,3 +39,23 @@ SHOW DATABASES
 SHOW TABLES
 ```
 
+```
+SELECT *  FROM myhive.moviedb.movies m INNER JOIN myhive.moviedb.ratings r ON r.movie_id = m.movie_id ;
+
+
+```
+
+
+```sql
+SELECT m.movie_id, avg(rating) as avg_rating, sum(user_id) as total_ratings FROM myhive.moviedb.movies m INNER JOIN myhive.moviedb.ratings r ON r.movie_id = m.movie_id group by m.movie_id
+;
+```
+
+
+
+```sql
+SELECT m.movie_id, avg(rating) as avg_rating, sum(user_id) as total_ratings FROM myhive.moviedb.movies m INNER JOIN myhive.moviedb.ratings r ON r.movie_id = m.movie_id group by m.movie_id
+
+HAVING avg(rating) >= 4 AND sum(user_id) >= 100
+;
+```
