@@ -45,6 +45,8 @@ CREATE DATABASE IF NOT EXISTS moviedb;
 
 
 ```
+cd ~
+cd ml-latest-small
 hdfs dfs -mkdir /movies
 
 hdfs dfs -chmod 777 /movies
@@ -67,7 +69,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS moviedb.movies(
   ROW FORMAT DELIMITED
   FIELDS TERMINATED BY ','
   STORED AS TEXTFILE
-  LOCATION 'hdfs://localhost:9000/ml-latest-small/movies.csv'
+  LOCATION 'hdfs://localhost:9000/movies/'
   TBLPROPERTIES ("skip.header.line.count"="1");
 ```
 
@@ -88,6 +90,8 @@ select * from moviedb.movies limit 5;
 
 
 ```
+cd ~
+cd ml-latest-small
 hdfs dfs -mkdir /ratings
 
 hdfs dfs -chmod 777 /ratings
@@ -111,7 +115,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS moviedb.ratings(
   ROW FORMAT DELIMITED
   FIELDS TERMINATED BY ','
   STORED AS TEXTFILE
-  LOCATION 'hdfs://localhost:9000/ml-latest-small/ratings.csv'
+  LOCATION 'hdfs://localhost:9000/ratings/'
   TBLPROPERTIES ("skip.header.line.count"="1");
 ```
 
