@@ -88,3 +88,16 @@ https://repo.maven.apache.org/maven2/org/apache/flink/flink-sql-parquet/1.15.0/f
  ```
 
 now check the jupyter link shown on the console, copy paste the same in your browser. 
+
+### Hint to know site-packages location
+system wide
+```
+python -m site
+
+python -c 'import site; print(site.getsitepackages())'
+
+```
+
+python -m site --user-site
+
+
