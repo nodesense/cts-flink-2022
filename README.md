@@ -101,3 +101,8 @@ python -c 'import site; print(site.getsitepackages())'
 python -m site --user-site
 
 
+The flink lib path is here   
+
+```
+/home/krish/flink-dev/lib/python3.8/site-packages/pyflink/lib
+```
