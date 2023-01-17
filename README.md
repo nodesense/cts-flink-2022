@@ -25,15 +25,15 @@ cd ~
 ```
 
 ```
-wget https://dlcdn.apache.org/flink/flink-1.15.0/flink-1.15.0-bin-scala_2.12.tgz
+wget  https://dlcdn.apache.org/flink/flink-1.15.3/flink-1.15.3-bin-scala_2.12.tgz
 
-tar xf flink-1.15.0-bin-scala_2.12.tgz
+tar xf flink-1.15.3-bin-scala_2.12.tgz
 
-sudo rm -rf /opt/flink-1.15.0
+sudo rm -rf /opt/flink-1.15.3
 
-sudo mv flink-1.15.0 /opt
+sudo mv flink-1.15.3 /opt
 
-sudo chmod 777 -R /opt/flink-1.15.0
+sudo chmod 777 -R /opt/flink-1.15.3
 ```
 
 # update bash rc files
@@ -47,7 +47,7 @@ paste below end of the file
 
 
 ```
-export FLINK_HOME=/opt/flink-1.15.0
+export FLINK_HOME=/opt/flink-1.15.3
 export CLASSPATH=$CLASSPATH:$FLINK_HOME/lib/*:.
 export HADOOP_CLASSPATH=`hadoop classpath`
 
@@ -76,3 +76,15 @@ it should open jupyter in firefox or look the url displayed in jupyter lab, copy
 
 https://repo.maven.apache.org/maven2/org/apache/flink/flink-sql-parquet/1.15.0/flink-sql-parquet-1.15.0.jar
 
+# PyFlink for Development
+
+```
+ python -m venv flink-dev
+ cd flink-dev
+ source bin/activate
+ pip install apache-flink==1.15.3
+ pip install jupyterlab
+ jupyter-lab
+ ```
+
+now check the jupyter link shown on the console, copy paste the same in your browser. 
